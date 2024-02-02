@@ -3,6 +3,7 @@ import OrderButton from "./OrderButton.jsx";
 import MenuFromData from "./MenuFromData.jsx";
 import CreateFakeOrders from "./CreateFakeOrders.jsx";
 import OrdersList from './OrdersList.jsx'
+import OrdersTable from "./OrdersTable.jsx";
 
 
 const menus = [
@@ -83,6 +84,10 @@ if (displayJSON) {
       <br />
       <MenuFromData menu={menus[1]} />
       <OrderButton />
+      <br />
+      <div class="w3-container">
+        <OrdersTable />
+      </div>
       <br />
       <div class="w3-container w3-light-grey">
         <OrdersList />
