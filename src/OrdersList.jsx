@@ -1,37 +1,39 @@
 import "w3-css/w3.css";
-import { dataOrders } from './dataOrders.js'
+import { ordersDataJSON } from "./ordersDataJSON.js";
 
 export default function OrdersList() {
- 
-    const data = dataOrders.map((d) => (
-      <>
-        <div class="w3-card-4" style={{ width: "50%" }}>
-          <header class="w3-container w3-blue">
-            <h1>Id: {d.id}</h1>
-          </header>
-          <div class="w3-container">
-            Waiter: {d.waiter}, Paid: {d.totalPayment} $
-          </div>
-          <footer class="w3-container w3-blue">
-            <h5>healtyFood restaurant</h5>
-          </footer>
+  const renderData = ordersDataJSON.map((order) => (
+    <>
+      <div class="w3-card-4" style={{ width: "50%" }}>
+        <header class="w3-container w3-sand">
+          <h3>Id: {order.id}</h3>
+        </header>
+        <br />
+        <div class="w3-container">
+          Waiter: {order.waiter}, qtyPeople: {order.qtyPeople}, To pay:{" "}
+          {order.paid ? " ✔" : "X"} {order.totalPayment} $
         </div>
-        <br/>
-      </>
-    ));
+        <div class="w3-container">Date: {order.date}</div>
+        <div class="w3-container">Table: {order.table}</div>
+        <div class="w3-container">Menus:<br/>
+         {order.menus.map ( (menu) => ( <><span>{menu.menu}:{menu.qty}, </span></>))  }</div>
+        <br />
+        <footer class="w3-container w3-black">
+          <h5>healthyFood restaurant</h5>
+        </footer>
+      </div>
+      <br />
+    </>
+  ));
 
+  console.log(ordersDataJSON);
 
-    console.log(dataOrders)
-
-//console.log(dataOrders);
-
-// const dataToPrint = data.map(order => <p>order.id</p>)
 
   return (
     <>
       <div class="w3-container">
         <h1>Orders List</h1>
-        <div class="w3-container">{data}</div>
+        <div class="w3-container">{renderData}</div>
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 
 
-const dataOrders = [
+const ordersDataJSON = [
 
   {
     "id": "O783",
@@ -16532,4 +16532,4 @@ const dataOrders = [
   }
 ]
 
-export {dataOrders};
+export { ordersDataJSON };

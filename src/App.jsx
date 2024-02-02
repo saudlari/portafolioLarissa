@@ -1,7 +1,7 @@
 import MenuList from "./MenuList.jsx";
-import Order from "./Order.jsx";
+import OrderButton from "./OrderButton.jsx";
 import OrderData from "./OrderData.jsx";
-import CreateOrders from "./ordersFaker.jsx";
+import CreateFakeOrders from "./CreateFakeOrders.jsx";
 import OrdersList from './OrdersList.jsx'
 
 
@@ -50,9 +50,9 @@ const menus = [
 
 export default function App() {
 
-const orderMapping = true;
+const displayJSON = true;
 
-if (orderMapping) {
+if (displayJSON) {
   return (
     <>
       <div class="w3-container">
@@ -79,20 +79,21 @@ if (orderMapping) {
         </a>
       </div>
       <br />
-    
-      <OrderData   menu = {menus[2]}/>
-      <Order />
+
+      <OrderData menu={menus[2]} />
+      <OrderButton />
       <br />
 
       <OrdersList />
     </>
-  ); } else {
+  );
+} else {
   return (
     <>
       <div class="w3-container">
-       
-        <CreateOrders />
+        <CreateFakeOrders />
       </div>
     </>
-  );}
+  );
+}
 }
