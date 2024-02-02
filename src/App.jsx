@@ -81,7 +81,7 @@ if (displayJSON) {
         </div>
       </div>
       <br />
-      <MenuFromData menu={menus[2]} />
+      <MenuFromData menu={menus[1]} />
       <OrderButton />
       <br />
       <div class="w3-container w3-light-grey">
