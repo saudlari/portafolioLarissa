@@ -1,4 +1,4 @@
-export default function OrderData({ menu }) {
+export default function MenuFromData({ menu }) {
   return (
     <>
       <div class="w3-container">

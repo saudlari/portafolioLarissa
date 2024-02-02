@@ -1,6 +1,6 @@
-import MenuList from "./MenuList.jsx";
+import MenuLisboa from "./MenuLisboa.jsx";
 import OrderButton from "./OrderButton.jsx";
-import OrderData from "./OrderData.jsx";
+import MenuFromData from "./MenuFromData.jsx";
 import CreateFakeOrders from "./CreateFakeOrders.jsx";
 import OrdersList from './OrdersList.jsx'
 
@@ -55,36 +55,38 @@ const displayJSON = true;
 if (displayJSON) {
   return (
     <>
-      <div class="w3-container">
+      <div class="w3-container w3-light-grey">
         <h1>healthy food</h1>
         <div class="w3-container w3-cell">
-          <MenuList />
+          <MenuLisboa />
         </div>
         <div class="w3-container w3-cell">
-          <MenuList />
+          <MenuLisboa />
         </div>
         <div class="w3-container w3-cell">
-          <MenuList />
+          <MenuLisboa />
         </div>
-        <MenuList />
+        <MenuLisboa />
       </div>
-      <div class="w3-container w3-cell">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div class="w3-container w3-pale-green">
+        <div class="w3-container w3-cell">
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </div>
       </div>
       <br />
-
-      <OrderData menu={menus[2]} />
+      <MenuFromData menu={menus[2]} />
       <OrderButton />
       <br />
-
-      <OrdersList />
+      <div class="w3-container w3-light-grey">
+        <OrdersList />
+      </div>
     </>
   );
 } else {
