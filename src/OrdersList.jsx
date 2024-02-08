@@ -26,7 +26,8 @@ export default function OrdersList() {
     </>
   ));
 
-  console.log(ordersDataJSON);
+  //console.log(ordersDataJSON);
+  console.log("renderdata", renderData);
 
 
   return (
