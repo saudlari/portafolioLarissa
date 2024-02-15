@@ -1,106 +1,27 @@
-import MenuLisboa from "./MenuLisboa.jsx";
-import OrderButton from "./OrderButton.jsx";
-import MenuFromData from "./MenuFromData.jsx";
-import CreateFakeOrders from "./CreateFakeOrders.jsx";
-import OrdersList from './OrdersList.jsx'
-import OrdersTable from "./OrdersTable.jsx";
-
-
-const menus = [
-  {
-    id: "M001",
-    name: "Menu Lisboa",
-    contents: [
-      "Meat Balls",
-      "Salad with tomato",
-      "Onion and carrot",
-      "Fresh Tuna",
-    ],
-    price: 80.0,
-    active: true,
-    water: true,
-  },
-  {
-    id: "M002",
-    name: "Menu New York",
-    contents: [
-      "Meat Balls with Pulled Steak",
-      "Salad with tomato",
-      "Brown Rice",
-      "Fresh Salmon",
-    ],
-    price: 85.0,
-    active: true,
-    water: true,
-  },
-  {
-    id: "M003",
-    name: "Menu Santiago",
-    contents: [
-      "Meat Chicken Curry",
-      "Salad with tomato",
-      "Carrot with edamame",
-      "Fresh Tuna",
-    ],
-    price: 82.0,
-    active: true,
-    water: true,
-  },
-];
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./layout/Layout";
+import Home from "./pages/Home";
+import Error from "./pages/Error";
+import About from "./pages/About";
+import Menus from "./pages/Menus/Menus";
+import Tables from "./pages/Tables/Tables";
+import Orders from "./pages/Orders/Orders";
+import FakeData from "./pages/FakeData/FakeData";
 
 export default function App() {
-
-const displayJSON = true;
-
-if (displayJSON) {
   return (
-    <>
-      <div class="w3-container w3-light-grey">
-        <h1>healthy food</h1>
-        <div class="w3-container w3-cell">
-          <MenuLisboa />
-        </div>
-        <div class="w3-container w3-cell">
-          <MenuLisboa />
-        </div>
-        <div class="w3-container w3-cell">
-          <MenuLisboa />
-        </div>
-        <MenuLisboa />
-      </div>
-      <div class="w3-container w3-pale-green">
-        <div class="w3-container w3-cell">
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </div>
-      </div>
-      <br />
-      <MenuFromData menu={menus[1]} />
-      <OrderButton />
-      <br />
-      <div class="w3-container">
-        <OrdersTable />
-      </div>
-      <br />
-      <div class="w3-container w3-light-grey">
-        <OrdersList />
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="menus" element={<Menus />} />
+          <Route path="tables" element={<Tables />} />
+          <Route path="fakeData" element={<FakeData />} />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
-} else {
-  return (
-    <>
-      <div class="w3-container">
-        <CreateFakeOrders />
-      </div>
-    </>
-  );
-}
 }

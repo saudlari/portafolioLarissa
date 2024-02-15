@@ -1,5 +1,5 @@
 import "w3-css/w3.css";
-import { ordersDataJSON } from "./ordersDataJSON.js";
+import { ordersDataJSON } from "./../ordersDataJSON.js";
 
 export default function OrdersTable() {
   const renderData = ordersDataJSON.map((order) => (
