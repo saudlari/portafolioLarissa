@@ -90,7 +90,7 @@ const CreateOrders = () => {
 
   return (
     <div>
-      <h1>Fake Generated 0.5K Orders</h1>
+      <h5>0.5K fake 'orders'</h5>
       <pre>{JSON.stringify(orders, null, 2)}</pre>
     </div>
   );
