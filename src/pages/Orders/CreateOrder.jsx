@@ -2,21 +2,20 @@ import "w3-css/w3.css";
 import React, { useState } from "react";
 
 
+  const currentOrderInit = {
+    orderId: "order#0",
+    date: "",
+    waiter: "",
+    table: "",
+    qtyPeople: 0,
+    menusSelected: [0, 0, 0],
+  };
 
 
 export default function CreateOrder() {
 
-  const currentOrderInit = {
-    "orderId": "order#0",
-    "date": "",
-    "waiter": "",
-    "table": "",
-    "qtyPeople": 0,
-    "menusSelected": [0, 0, 0],
-  };
 
- const [currentOrder, setCurrentOrder] = useState(currentOrderInit);
-
+  const [currentOrder, setCurrentOrder] = useState(currentOrderInit);
   const [orderId, setOrderId] = useState('');
   const [selectedWaiter, setSelectedWaiter] = useState("");
   const [selectedTable, setSelectedTable] = useState('');
@@ -106,7 +105,7 @@ export default function CreateOrder() {
       <div class="w3-container">
         <div class="w3-row">
           <div class="w3-col m6">
-            <div class="w3-panel w3-card-4 w3-light-grey">
+            <div class="w3-panel w3-card-4 w3-sand">
               <h1>Order</h1>
               <form onSubmit={handleSubmit}>
                 <div>
