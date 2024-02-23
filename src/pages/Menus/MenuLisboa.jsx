@@ -1,6 +1,6 @@
 import "w3-css/w3.css";
 
-export default function MenuList() {
+export default function MenuLisboa() {
   return (
     <>
       <div class="w3-container">

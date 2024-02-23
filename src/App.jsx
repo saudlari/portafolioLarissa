@@ -1,43 +1,31 @@
-import MenuList from "./MenuList.jsx";
-import CreateOrder from "./CreateOrder.jsx";
-import "w3-css/w3.css";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./layout/Layout";
+import Home from "./pages/Home";
+import Error from "./pages/Error";
+import About from "./pages/About";
+import Menus from "./pages/Menus/Menus";
+import Tables from "./pages/Tables/Tables";
+import Orders from "./pages/Orders/Orders";
+import Team from "./pages/Team/Team";
+import FakeData from "./pages/FakeData/FakeData";
 
 export default function App() {
   return (
-    <>
-      <div class="w3-container">
-        <h1>healthy food</h1>
-      </div>
-      <div class="w3-row">
-        <div class="w3-col m4">
-          <MenuList />
-        </div>
-        <div class="w3-col m4">
-          <MenuList />
-        </div>
-        <div class="w3-col m4">
-          <MenuList />
-        </div>
-      </div>
-      <MenuList />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="menus" element={<Menus />} />
+          <Route path="tables" element={<Tables />} />
+          <Route path="fakeData" element={<FakeData />} />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<Error />} />
+          <Route path="team" element={<Team />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
 
-      <div class="w3-container w3-cell">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </div>
-      <br />
-      <div class="w3-container w3-cell">
-        {" "}
-        <CreateOrder />
-      </div>
-
-      <br />
-    </>
   );
 }
