@@ -9,6 +9,7 @@ import Tables from "./pages/Tables/Tables";
 import Orders from "./pages/Orders/Orders";
 import Contact from "./pages/Contact/Contact";
 import FakeData from "./pages/FakeData/FakeData";
+import Infografias from "./pages/Infografias/Infografias";
 
 export default function App() {
   return (
@@ -20,6 +21,8 @@ export default function App() {
           <Route path="menus" element={<Menus />} />
           <Route path="tables" element={<Tables />} />
           <Route path="fakeData" element={<FakeData />} />
+          <Route path="infografias" element={<Infografias />} />
+          <Route path="infografias/:id" element={<Infografias />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<Error />} />
           <Route path="contact" element={<Contact />} />

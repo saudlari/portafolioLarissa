@@ -25,6 +25,9 @@ export default function Layout () {
           </Link>
           <Link class="w3-bar-item w3-button" to="/fakeData">
             Fake Data
+            </Link>
+          <Link class="w3-bar-item w3-button" to="/infografias">
+            Infografias
           </Link>
           <Link class="w3-bar-item w3-button" to="/about">
             About
@@ -39,7 +42,7 @@ export default function Layout () {
         <Header class="w3-container" />
       </div>
 
-      <div class="w3-content" style={{ width: "80%" }}>
+      <div style={{"margin-top": "55px"}}>
         <Outlet />
       </div>
 
