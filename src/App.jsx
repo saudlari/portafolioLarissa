@@ -1,13 +1,13 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Error from "./pages/Error";
 import About from "./pages/About";
 import Menus from "./pages/Menus/Menus";
 import Tables from "./pages/Tables/Tables";
 import Orders from "./pages/Orders/Orders";
-import Team from "./pages/Team/Team";
+import Contact from "./pages/Contact/Contact";
 import FakeData from "./pages/FakeData/FakeData";
 
 export default function App() {
@@ -22,7 +22,7 @@ export default function App() {
           <Route path="fakeData" element={<FakeData />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<Error />} />
-          <Route path="team" element={<Team />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>

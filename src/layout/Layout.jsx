@@ -8,7 +8,7 @@ export default function Layout () {
     <>
       <nav class="w3-top">
         <div
-          class="w3-bar w3-white w3-padding w3-card"
+          class="w3-row w3-padding w3-black"
           style={{ letterSpacing: "4px" }}
         >
           <Link class="w3-bar-item w3-button" to="/">
@@ -26,11 +26,11 @@ export default function Layout () {
           <Link class="w3-bar-item w3-button" to="/fakeData">
             Fake Data
           </Link>
-          <Link class="w3-bar-item w3-button" to="/team">
-            Team
-          </Link>
           <Link class="w3-bar-item w3-button" to="/about">
             About
+          </Link>
+          <Link class="w3-bar-item w3-button" to="/contact">
+            Contact
           </Link>
         </div>
       </nav>

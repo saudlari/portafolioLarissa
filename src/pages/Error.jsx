@@ -10,6 +10,7 @@ export default function Error (){
             <h1 class="w3-text-grey">Page not found</h1>
           </div>
         </div>
+
       </>
     );
 }
