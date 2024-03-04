@@ -1,18 +1,13 @@
 import React from 'react';
-import Iframe from './Iframe';
+import Iframe from '../Infografias/Iframe';
 
 
-export default function RacismoVecinal() {
+export default function RacismoVecinalHome() {
     return (
       <>
-      <div>
-      <div className="w3-container w3-black">
-        <h1>Racismo Vecinal</h1>
-      </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
        <Iframe link="https://e.infogram.com/229500e5-c322-4e80-ba45-53dfd9402722?src=embed" title="Racismo Vecinal" width="1400" height="1200"/>
        </div>
-       </div>
-    </>
+       </>
   );
 }

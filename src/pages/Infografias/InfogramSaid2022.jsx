@@ -5,7 +5,7 @@ export default function InfogramSaid2022() {
     return (
       <>
      <div>
-      <div className="w3-container w3-teal">
+      <div className="w3-container w3-black">
         <h1>Informe Said 2022</h1>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>

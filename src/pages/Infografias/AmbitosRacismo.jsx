@@ -6,7 +6,7 @@ export default function AmbitosRacismo() {
     return (
       <>
        <div>
-      <div className="w3-container w3-teal">
+      <div className="w3-container w3-black">
         <h1>Ambitos del Racismo</h1>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>

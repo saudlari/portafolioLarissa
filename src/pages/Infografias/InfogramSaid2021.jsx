@@ -7,7 +7,7 @@ export default function InfogramSaid2021() {
     return (
       <>
       <div>
-             <div className="w3-container w3-teal">
+             <div className="w3-container w3-black">
         <h1>Infografia Said 2021</h1>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
