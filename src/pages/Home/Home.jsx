@@ -1,6 +1,4 @@
-
-
-
+import CarouselComponent from "./Gallery";
 
 export default function Home (){
 
@@ -10,9 +8,8 @@ export default function Home (){
         <div class="w3-content">
           <h1 class="w3-center w3-text-grey">This is home</h1>
         </div>
-      
-
-      
+      < CarouselComponent />
+        
       </>
     );
 }
