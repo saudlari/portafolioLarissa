@@ -17,8 +17,8 @@ export default function Layout () {
           <Link class="w3-bar-item w3-button" to="/orders">
             Orders
           </Link>
-          <Link class="w3-bar-item w3-button" to="/menus">
-            Menus
+          <Link class="w3-bar-item w3-button" to="/reportajes">
+            Reportajes
           </Link>
           <Link class="w3-bar-item w3-button" to="/tables">
             Tables

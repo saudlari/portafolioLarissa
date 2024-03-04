@@ -33,6 +33,7 @@ function PageContent({ selectedInfographic }) {
         {id === 'racismo-vecinal' && <RacismoVecinal />}
         {id === 'ambitosracismo' && <AmbitosRacismo />}
         {id === 'migracion' && <Migracion />}
+        {id === undefined && <RacismoVecinal /> }
 
 
       </div>
