@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function ReportajesGrid() {
+export default function ReportajesGrid() {
   return (
     <div>
       <div className="w3-row-padding w3-padding-16 w3-center" id="food">
@@ -66,4 +66,4 @@ function ReportajesGrid() {
   );
 }
 
-export default ReportajesGrid;
+
