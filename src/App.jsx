@@ -6,6 +6,8 @@ import Error from "./pages/Error";
 import About from "./pages/About";
 import Contact from "./pages/Contact/Contact";
 import Infografias from "./pages/Infografias/Infografias";
+import ReportajesGrid from "./pages/Reportajes/Reportajes"
+
 
 export default function App() {
   return (
@@ -13,6 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="reportajes" element={<ReportajesGrid />} />
           <Route path="infografias" element={<Infografias />} />
           <Route path="infografias/:id" element={<Infografias />} />
           <Route path="about" element={<About />} />
