@@ -63,4 +63,3 @@ Esto abrirá el portafolio en tu navegador web local, donde podrás explorar mi 
 
 ---
 
-Puedes personalizar este README agregando más detalles sobre tu trabajo, tu proceso creativo, enlaces a tus redes sociales o sitios web, y cualquier otra información que consideres relevante. ¡Espero que te sea útil!
